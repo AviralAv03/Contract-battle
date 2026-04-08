@@ -13,48 +13,60 @@
 
 # Interstellar Vault 🚀
 
-Welcome, spacefarer, to the Interstellar Vault! This is a competitive, level-based smart contract challenge designed to test your Solidity hacking and development skills.
+Welcome, spacefarer, to the Interstellar Vault! This is a competitive, level-based smart contract challenge designed to test your raw Solidity hacking and development skills across progressively devastating security flaws.
 
 ## How to Play
 
+### 1. Setup the Template
+To begin your journey, you must clone the mission repository:
+
 1. **Fork this repository** to your own GitHub account.
-2. Clone your fork locally to begin your journey:
+2. **Clone your fork locally**:
    ```bash
    git clone https://github.com/YOUR_USERNAME/Contract-battle.git
    cd Contract-battle
    ```
-3. Initialize the development environment. You will need **Foundry**.
-   
-   **To install Foundry:**
-   * **Linux & macOS**: 
-     ```bash
-     curl -L https://foundry.paradigm.xyz | bash
-     foundryup
-     ```
-   * **Windows (Git Bash or WSL)**:
-     ```bash
-     curl -L https://foundry.paradigm.xyz | bash
-     # Restart terminal or run: source ~/.bashrc
-     foundryup
-     ```
 
-   Then, setup the project submodules:
-   ```bash
-   git submodule update --init --recursive
-   ```
+### 2. Understand the File Structure
+Your galactic workspace contains the following critical directories:
+- `instructions/` — Contains your current mission briefing (e.g., `Level1.md`). Read this first to understand the vulnerabilities.
+- `src/` — Contains the buggy smart contract template. **This is where you will write your code!**
+- `test/` — Contains a lightweight local test file.
+- `submit.sh` — The secure transmission script to submit your code to the Central Judge.
 
-4. **Mission Briefing:** Read your current mission instructions here: [instructions/Level1.md](instructions/Level1.md).
-5. Run the local tests to ensure your baseline logic is correct:
-   ```bash
-   forge test
-   ```
-6. **Submit using CLI:** When you are ready to face the Judge, do not commit. Instead, simply run:
-   ```bash
-   ./submit.sh
-   ```
-   *(Your Pilot Name will be automatically detected safely via your GitHub identity).*
-7. **The Galactic Judge:** Your terminal will securely transmit your code to the Central Judge. 
-   - A radar ping will appear in your terminal. The Judge is currently compiling and running **secret edge-case tests** against your smart contract.
-   - If you pass, your terminal will announce `ACCESS GRANTED` and the Judge will autonomously drop the `Level2.sol` file straight onto your hard drive! 
-   - Your name will also be permanently etched into the Leaderboard above.
-   - If you fail, access is denied. Examine your code locally and try again!
+### 3. Install Foundry (The Environment)
+This project uses pure native Solidity. You will need **Foundry** to run and compile your code.
+
+**To install Foundry:**
+* **Linux & macOS**: 
+  ```bash
+  curl -L https://foundry.paradigm.xyz | bash
+  # Restart your terminal or run: source ~/.bashrc
+  foundryup
+  ```
+* **Windows (Git Bash or WSL)**:
+  ```bash
+  curl -L https://foundry.paradigm.xyz | bash
+  # Restart your terminal or run: source ~/.bashrc
+  foundryup
+  ```
+
+### 4. Local Testing
+Once you have modified the code in `src/LevelX.sol` to secure the vulnerabilities, run the local tests to ensure your baseline logic is dynamically sound:
+```bash
+forge test
+```
+
+### 5. Submission & Progression
+When you are ready to face the Judge, do not commit. Instead, simply run:
+```bash
+./submit.sh
+```
+*(Your Pilot Name will be automatically detected safely via your GitHub identity).*
+
+**The Galactic Judge:** Your terminal will securely transmit your code to the Central Judge. 
+- A radar ping will appear in your terminal. The Judge is currently compiling and running **secret edge-case evaluator tests** against your smart contract.
+- If you pass, your terminal will announce `ACCESS GRANTED` and the Judge will autonomously drop the next level's files straight onto your hard drive! 
+- Your name will also be permanently etched into the Galactic Leaderboard above.
+- There are **4 Levels** in total. If you conquer them all, you will receive the final broadcast!
+- If you fail, access is denied. Examine your code locally and try again!
